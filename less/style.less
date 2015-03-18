@@ -60,20 +60,11 @@ h2{
     top: 1px;
     }
   }
-  // &--red{
-  //   background-color: @main-color;
-  //   box-shadow: 0 5px 0 0 #470909;
-  // }
-  // &--grey{
-  //   background-color: @btn-bgcolor-grey;
-  //   box-shadow: 0 5px 0 0 #470909;
-  // }
-  
 }
 
 header{
   background-image: url(../images/pattern-background.png);
-  min-width: 1024px;
+  min-width: @min-width;
   & .row{
     font-size: 0;
   }
@@ -88,6 +79,10 @@ header{
   display: inline-block;
   vertical-align: middle;
   float: none;
+
+  & ul{
+    padding: 0;
+  }
 
   &__nav-item{
     display: inline-block;
@@ -120,19 +115,25 @@ header{
   vertical-align: middle;
   float: none;
   font-family: @font-family, sans-serif;
+  padding-left: 0;
 
   & ul{
     list-style: none;
-    padding-left: 60px;
+    padding-left: 0;
+    text-align: right;
   }
 
   & .fast-phone{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25px;
     font-size: @fast-phone-font-size;
     line-height: @fast-phone-font-line-height;
     font-weight: @font-weight-bold;
+    
 
     &:before{
-      background-image: url(../images/icon-phone-header.png);
+      background-image: url(../images/icon-phone.png);
       content: '';
       display: inline-block;
       width: 16px;
@@ -146,6 +147,8 @@ header{
   }
 
   & .fast-email{
+    display: inline-block;
+    vertical-align: middle;
     font-size: @fast-email-font-size;
     line-height: @fast-email-font-line-height;
 
@@ -176,7 +179,7 @@ header{
   background-size: cover;
   color: #fff;
   padding-top: 35px;
-  min-width: 1024px;
+  min-width: @min-width;
 
   & row{
     padding-top: 120px;
@@ -199,20 +202,45 @@ header{
     display: block;
     font-weight: @font-weight-light;
     margin-bottom: 53px;
+    margin-left: 15px;
 
     &:before{
       background-image: url(../images/icon-red-check.png);
       content: '';
       display: inline-block;
-      width: 41px;
-      height: 28px;
       position: relative;
       -webkit-background-size: 100%;
       background-size: 100%;
       vertical-align: top;
-      margin-right: 15px;
     }
 
+  }
+  & .like:before{
+      background-image: url(../images/icon-like.png);
+      width: 41px;
+      height: 34px;
+      margin-right: 15px;
+  }
+  & .matreshka:before{
+      background-image: url(../images/icon-matreshka.png);
+      width: 29px;
+      height: 39px;
+      margin-left: 5px;
+      margin-right: 22px;
+  }
+  & .clock:before{
+      background-image: url(../images/icon-clock.png);
+      width: 35px;
+      height: 32px;
+      margin-right: 21px;
+      vertical-align: middle;
+  }
+  & .eye:before{
+      background-image: url(../images/icon-eye.png);
+      width: 34px;
+      height: 22px;
+      margin-right: 22px;
+      vertical-align: middle;
   }
 
 }
@@ -283,23 +311,9 @@ header{
   }
 }
 
-.our-clients{
-  background-image: url(../images/bacground-our-clients.jpg);
-  background-position: 50% 50%;
-  background-size: cover;
-  text-align: center;
-  padding-top: 70px;
-  padding-bottom: 100px;
-  min-width: 1024px;
-
-  & p{
-    font-size: @advantage-paragraph-size;
-    font-family: @font-family, sans-serif;
-    line-height: @advantage-paragraph-line-height;
-  }
-}
 .advantages{
-
+    text-align: center;
+    
   &.advantages--dark{
     background-image: url(../images/background-paper-dark.jpg);
     background-position: 50% 50%;
@@ -317,11 +331,22 @@ header{
     padding-bottom: 100px;
     min-width: 1024px;
   }
+  & p{
+    font-size: @advantage-paragraph-size;
+    font-family: @font-family, sans-serif;
+    line-height: @advantage-paragraph-line-height;
+  }
 }
 
 .our-clients{
+  background-image: url(../images/bacground-our-clients.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  min-width: @min-width;
   padding-bottom: 40px;
-  min-width: 1024px;
 
     & ul{
       text-align: left;
@@ -377,7 +402,7 @@ header{
 
 
 .fast-feedback{
-  min-width: 1180px;
+  min-width: @min-width;
 
   &__feedback-form{
     padding-top: 10px;
@@ -399,11 +424,12 @@ header{
     height: @btn-font-line-height;
     font-size: @input-text-size;
     margin-right: 10px;
-    width: 250px;
+    width: 295px;
     padding-left: 15px;
     outline: none;
     border-radius: 5px;
     border: none;
+    vertical-align: baseline;
   }
   & p{
     margin: 0;
@@ -453,18 +479,18 @@ header{
 .reviews{
   padding-top: 70px;
   padding-bottom: 100px;
-  min-width: 1024px;
+  min-width: @min-width;
 
   &__slide{
     position: relative;
 
     & .bx-prev{
     position: absolute;
-    background-image: url(../images/icon-arrow-left-slider.png);
+    background-image: url(../images/icon-left-arrow-adaptive.png);
     width: 136px;
     height: 136px;
     top: 30%;
-    left: -40px;
+    left: -20px;
     font-size: 0;
     opacity: 0.6;
       &:hover{
@@ -473,11 +499,11 @@ header{
     }
     & .bx-next{
     position: absolute;
-    background-image: url(../images/icon-arrow-right-slider.png);
+    background-image: url(../images/icon-right-arrow-adaptive.png);
     width: 136px;
     height: 136px;
     top: 30%;
-    right: -40px;
+    right: -20px;
     font-size: 0;
     opacity: 0.6;
       &:hover{
@@ -493,7 +519,7 @@ header{
   display: none;
 }
 .bx-wrapper, .bx-viewport{
-  min-width: 1024px;
+  min-width: @min-width - 20px;
 }
   
   h2{
@@ -562,14 +588,17 @@ header{
 
 .map{
   height: 480px;
-  min-width: 1024px;
+  min-width: @min-width;
 }
 
 footer{
   background-color: @footer-background-color;
   color: #fff;
-  min-width: 1024px;
-
+  min-width: @min-width;
+  
+  & p{
+    color: #cbeefe;
+  }
   & p, & span{
     font-size: 18px;
     font-family: @font-family, sans-serif;
@@ -579,19 +608,24 @@ footer{
   }
   & span{
     text-align: right;
+    color: #fff;
   }
   & a{
-    color: #ff7479;
+    color: #fff;
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: @min-width) {
     .reviews {
+      overflow: hidden;
+
       & .bx-prev{
-        left: 30px;
+        background-image: url(../images/icon-arrow-left-slider.png);
+        left: -65px;
       }
       & .bx-next{
-        right: 30px;
+        background-image: url(../images/icon-arrow-right-slider.png);
+        right: -65px;
       }
     }
     .container{
