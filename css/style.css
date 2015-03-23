@@ -554,12 +554,29 @@ header .row {
   margin-right: 10px;
 }
 .top-slide {
-  background-image: url(../images/background-main-top-slide.jpg);
   background-position: 50% 50%;
   background-size: cover;
   color: #fff;
   padding-top: 35px;
   min-width: 1180px;
+}
+.top-slide--loaders {
+  background-image: url(../images/background-top-slide-loaders.jpg);
+}
+.top-slide--main {
+  background-image: url(../images/background-top-slide-index.jpg);
+}
+.top-slide--main li {
+  display: none;
+}
+.top-slide--workers {
+  background-image: url(../images/background-top-slide-workers.jpg);
+}
+.top-slide--vacancy {
+  background-image: url(../images/background-top-slide-vacancy.jpg);
+}
+.top-slide--vacancy li {
+  display: none;
 }
 .top-slide row {
   padding-top: 120px;
@@ -696,12 +713,16 @@ header .row {
   min-width: 1180px;
   color: #fff;
 }
-.advantages.advantages--white {
+.advantages--white {
   background-color: #fff;
   text-align: center;
   padding-top: 70px;
   padding-bottom: 100px;
   min-width: 1024px;
+}
+.advantages--vacancy {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 .advantages p {
   font-size: 18px;
