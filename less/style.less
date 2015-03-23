@@ -178,6 +178,7 @@ header{
   background-size: cover;
   color: #fff;
   padding-top: 35px;
+  padding-bottom: 35px;
   min-width: @min-width;
 
   &--loaders{
@@ -214,6 +215,13 @@ header{
     padding: 0 100px 40px 100px;
     text-align: center;
   }
+  &--main h1{
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  &__advantages{
+    padding-left: 150px;
+  }
 
   &__advantages-item{
     font-size: @top-slide-advantages-size;
@@ -221,8 +229,12 @@ header{
     vertical-align: middle;
     display: block;
     font-weight: @font-weight-light;
-    margin-bottom: 53px;
+    margin-top: 43px;
     margin-left: 15px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
 
     &:before{
       background-image: url(../images/icon-red-check.png);
@@ -432,6 +444,7 @@ header{
   &__feedback-form{
     padding-top: 10px;
     padding-bottom: 30px;
+    padding-left: 200px;
   }
   &--feedback-dark{
     background-image: url(../images/pattern-dark-grey.png);
@@ -471,8 +484,9 @@ header{
 }
 
 .phone{
-  padding: 10px 30px 20px 30px;
+  padding: 10px 150px 20px 0px;
   text-align: right;
+
   &__phone-head, &__phone-number{
       font-family: @font-family, sans-serif;
       display: block;

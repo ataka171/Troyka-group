@@ -558,6 +558,7 @@ header .row {
   background-size: cover;
   color: #fff;
   padding-top: 35px;
+  padding-bottom: 35px;
   min-width: 1180px;
 }
 .top-slide--loaders {
@@ -590,14 +591,24 @@ header .row {
   padding: 0 100px 40px 100px;
   text-align: center;
 }
+.top-slide--main h1 {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+.top-slide__advantages {
+  padding-left: 150px;
+}
 .top-slide__advantages-item {
-  font-size: 24px;
+  font-size: 18px;
   line-height: 36px;
   vertical-align: middle;
   display: block;
   font-weight: 300;
-  margin-bottom: 53px;
+  margin-top: 43px;
   margin-left: 15px;
+}
+.top-slide__advantages-item:last-child {
+  margin-bottom: 0;
 }
 .top-slide__advantages-item:before {
   background-image: url(../images/icon-red-check.png);
@@ -792,6 +803,7 @@ header .row {
 .fast-feedback__feedback-form {
   padding-top: 10px;
   padding-bottom: 30px;
+  padding-left: 200px;
 }
 .fast-feedback--feedback-dark {
   background-image: url(../images/pattern-dark-grey.png);
@@ -830,7 +842,7 @@ header .row {
   line-height: 35px;
 }
 .phone {
-  padding: 10px 30px 20px 30px;
+  padding: 10px 150px 20px 0px;
   text-align: right;
 }
 .phone__phone-head,
